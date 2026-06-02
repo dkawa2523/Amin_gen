@@ -1,0 +1,27 @@
+file,purpose
+01_amine_class_fluorination.png,Amine class counts split by fluorinated candidate status.
+02_amine_class_pfas.png,PFAS screening result by amine class.
+03_property_coverage.png,Availability of key physical properties in the amine summary.
+04_boiling_point_by_class.png,Boiling point distribution by amine class.
+05_vapor_pressure_25C_by_class.png,"Estimated or curated vapor pressure at 25C by amine class, log scale."
+06_phase_supply_matrix.png,Phase versus supply class distribution for amines.
+07_mw_vs_boiling_pfas.png,"Molecular weight versus boiling point, colored by PFAS flag."
+08_precursor_family_counts.png,Curated semiconductor amine precursor families excluding template-only unknown.
+09_fluorination_pfas_matrix.png,Fluorination level versus PFAS screening result.
+10_process_role_counts.png,Semiconductor process role tags on curated amine candidates.
+11_property_scatter_matrix_by_class.png,Scatter-matrix view of key amine properties colored by amine class.
+12_tb_vs_pvap25_by_class.png,Boiling point versus 25C vapor pressure colored by amine class.
+13_mw_vs_pvap25_by_class.png,Molecular weight versus 25C vapor pressure colored by amine class.
+14_tc_vs_pc_by_class.png,Critical temperature versus critical pressure colored by amine class.
+15_tm_vs_tb_by_class.png,Melting point versus boiling point colored by amine class.
+16_pvap25_vs_pvap60_by_class.png,Vapor pressure at 25C versus 60C colored by amine class.
+17_gwp_availability_by_family.png,GWP100 AR6 availability rate by candidate family.
+18_gwp100_ar6_known_values.png,Known local GWP100 AR6 values merged into the screening output.
+19_gwp_by_pfas_flag.png,Known GWP100 AR6 values grouped by PFAS screening flag.
+20_gwp_vs_molecular_weight.png,"Known GWP100 AR6 values versus molecular weight, colored by PFAS screen."
+21_mw_vs_melting_pfas.png,"Molecular weight versus melting point, colored by PFAS flag."
+22_mw_vs_critical_temperature_pfas.png,"Molecular weight versus critical temperature, colored by PFAS flag."
+23_mw_vs_critical_pressure_pfas.png,"Molecular weight versus critical pressure, colored by PFAS flag."
+24_mw_vs_pvap25_pfas.png,"Molecular weight versus 25C vapor pressure, colored by PFAS flag."
+25_mw_vs_pvap40_pfas.png,"Molecular weight versus 40C vapor pressure, colored by PFAS flag."
+26_mw_vs_pvap60_pfas.png,"Molecular weight versus 60C vapor pressure, colored by PFAS flag."

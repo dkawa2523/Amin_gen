@@ -1,0 +1,112 @@
+generation:
+  mode: exploration
+  max_total_candidates: 5000
+  max_api_candidates_per_run: 500
+  enabled_generators:
+    - SeedListGenerator
+    - SemiconductorAmineGenerator
+    - AmineTemplateGenerator
+    - FluorocarbonFormulaGenerator
+    # - LocalMutationGenerator
+    # - PubChemExpansionGenerator
+
+  amine:
+    max_candidates: 1000
+    max_carbons: 8
+    max_heavy_atoms: 12
+    include_fluorinated_substituents: true
+    substituents:
+      - methyl
+      - ethyl
+      - n-propyl
+      - isopropyl
+      - n-butyl
+      - tert-butyl
+      - fluoromethyl
+      - difluoromethyl
+      - fluoroethyl
+      - difluoroethyl
+      - trifluoromethyl
+      - trifluoroethyl
+      - pentafluoroethyl
+      - vinyl
+      - allyl
+      - cyclopropyl
+
+  semiconductor_amine:
+    max_candidates: 80
+    max_heavy_atoms: 20
+
+  fluorocarbon:
+    include_formula_only: true
+    carbon_range: [1, 5]
+    allowed_elements: [C, H, F, Cl, O, N]
+    max_cids_per_formula: 25
+
+  pubchem_expansion:
+    enabled: false
+    threshold: 90
+    max_cids_per_seed: 25
+    rps: 1.0
+
+  local_mutation:
+    enabled: false
+    max_steps: 1
+    max_candidates_per_seed: 20
+    rules:
+      - H_to_F
+      - CH3_to_CF3
+      - ethyl_to_trifluoroethyl
+
+prefilter:
+  max_molecular_weight: 300
+  max_heavy_atoms: 20
+  allow_formula_only: false
+  min_score: 0.45
+  allowed_elements:
+    - H
+    - C
+    - N
+    - O
+    - F
+    - Cl
+    - Br
+    - Si
+    - B
+    - P
+    - S
+    - W
+    - Mo
+    - Ti
+    - Ar
+    - He
+    - Ne
+    - As
+
+planning:
+  min_identity_api_score: 0.45
+  min_enrichment_api_score: 0.85
+
+providers:
+  pubchem_enabled: false
+  pugview_enabled: false
+  pubchem_rps: 3.0
+  pugview_rps: 1.0
+  cache_db: ./evaluation_exploration_cache.sqlite
+  curated_properties_csv: examples/local_properties_sample.csv
+  gwp_csv: examples/gwp_sample.csv
+  pfas_list_csv: examples/pfas_list_sample.csv
+  reactivity_csv: examples/local_reactivity_sample.csv
+  kinetics_csv: examples/kinetics_coverage_sample.csv
+
+selection:
+  required_properties:
+    - normal_melting_point
+    - normal_boiling_point
+    - critical_temperature
+    - critical_pressure
+    - gwp100_ar6
+  target_vapor_temperatures_K:
+    - 298.15
+    - 313.15
+    - 333.15

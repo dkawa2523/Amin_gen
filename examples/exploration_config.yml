@@ -1,0 +1,71 @@
+mode: exploration
+
+generation:
+  max_total_candidates: 250
+  enabled_generators:
+    - SeedListGenerator
+    - SemiconductorAmineGenerator
+    - AmineTemplateGenerator
+    - FluorocarbonFormulaGenerator
+    - LocalMutationGenerator
+    - PubChemExpansionGenerator
+  include_formula_only: true
+  amine_max_candidates: 80
+  amine_max_carbons: 5
+  amine_max_heavy_atoms: 12
+  amine_allowed_substituents:
+    - small_alkyl
+    - fluorinated_alkyl
+  semiconductor_amine_max_candidates: 80
+  semiconductor_amine_max_heavy_atoms: 20
+  local_mutation_enabled: false
+  local_mutation_max_candidates: 50
+  local_mutation_max_heavy_atoms: 14
+  pubchem_expansion_enabled: false
+  pubchem_similarity_threshold: 90
+  max_cids_per_seed: 10
+  pubchem_expansion_rps: 1.0
+  formula_search_enabled: false
+  max_cids_per_formula: 5
+
+prefilter:
+  max_molecular_weight: 300
+  max_heavy_atoms: 20
+  allow_formula_only: true
+  min_score: 0.0
+  allowed_elements:
+    - H
+    - C
+    - N
+    - O
+    - F
+    - Cl
+    - Br
+    - Si
+    - B
+    - P
+    - S
+    - W
+    - Mo
+    - Ti
+    - Ar
+    - He
+    - Ne
+    - As
+
+providers:
+  pubchem_enabled: false
+  pugview_enabled: false
+  pubchem_rps: 3.0
+  pugview_rps: 1.0
+  cache_db: ./exploration_cache.sqlite
+  max_api_candidates_per_run: 20
+  curated_properties_csv:
+  gwp_csv: examples/gwp_sample.csv
+  pfas_list_csv: examples/pfas_list_sample.csv
+  reactivity_csv: examples/local_reactivity_sample.csv
+  kinetics_csv: examples/kinetics_coverage_sample.csv
+
+fetch_planning:
+  min_identity_api_score: 0.45
+  min_enrichment_api_score: 0.85

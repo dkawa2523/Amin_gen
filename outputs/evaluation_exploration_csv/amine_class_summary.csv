@@ -1,0 +1,12 @@
+﻿amine_class,amine_class_label,count,fluorinated_count,non_fluorinated_count,pfas_yes_count,pfas_possible_count,pfas_no_count,likely_persistent_count,reactive_group_assigned_count,temperature_property_count,vapor_pressure_count,phase_known_count,review_required_count
+primary,primary_amine,18,7,11,3,4,11,3,18,18,18,18,18
+secondary,secondary_amine,133,90,43,30,60,43,30,133,133,133,133,133
+tertiary,tertiary_amine,496,443,53,89,354,53,89,496,496,496,496,496
+cyclic,cyclic_amine,8,0,8,0,0,8,0,8,8,8,8,8
+diamine,diamine,4,0,4,0,0,4,0,4,4,4,4,4
+polyamine,polyamine,1,0,1,0,0,1,0,1,1,1,1,1
+amino_silane,amino_silane,8,0,8,0,0,8,0,8,8,8,8,8
+silylamine,silylamine,1,0,1,0,0,1,0,1,1,1,1,1
+boron_amide,boron_amide,1,0,1,0,0,1,0,1,1,1,1,1
+metal_amide,metal_amide,1,0,1,0,0,1,0,1,1,1,1,1
+inorganic_nitrogen_source,inorganic_nitrogen_source,1,0,1,0,0,1,0,1,1,1,1,1

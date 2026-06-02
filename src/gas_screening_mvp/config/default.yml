@@ -1,0 +1,97 @@
+mode: enrichment
+
+generation:
+  max_total_candidates: 200
+  enabled_generators:
+    - SeedListGenerator
+  include_formula_only: false
+  amine_max_candidates: 500
+  amine_max_carbons: 6
+  amine_max_heavy_atoms: 12
+  amine_allowed_substituents: []
+  semiconductor_amine_max_candidates: 80
+  semiconductor_amine_max_heavy_atoms: 20
+  semiconductor_amine_allowed_precursor_families: []
+  local_mutation_enabled: false
+  local_mutation_max_candidates: 100
+  pubchem_expansion_enabled: false
+  pubchem_similarity_threshold: 90
+  max_cids_per_seed: 25
+  pubchem_expansion_rps: 1.0
+  formula_search_enabled: false
+  max_cids_per_formula: 10
+
+prefilter:
+  max_molecular_weight: 300
+  max_heavy_atoms: 20
+  allow_formula_only: false
+  min_score: 0.0
+  allowed_elements:
+    - H
+    - C
+    - N
+    - O
+    - F
+    - Cl
+    - Br
+    - Si
+    - B
+    - P
+    - S
+    - W
+    - Mo
+    - Ti
+    - Ar
+    - He
+    - Ne
+    - As
+
+providers:
+  pubchem_enabled: false
+  pugview_enabled: false
+  pubchem_rps: 3.0
+  pugview_rps: 1.0
+  cache_db: ./gas_screening_cache.sqlite
+  max_api_candidates_per_run: 25
+  curated_properties_csv:
+  gwp_csv:
+  pfas_list_csv:
+  reactivity_csv:
+  kinetics_csv:
+
+selection:
+  required_properties:
+    - normal_melting_point
+    - normal_boiling_point
+    - critical_temperature
+    - critical_pressure
+    - gwp100_ar6
+  target_vapor_temperatures_K:
+    - 298.15
+    - 313.15
+    - 333.15
+
+fetch_planning:
+  min_identity_api_score: 0.45
+  min_enrichment_api_score: 0.85
+
+supply_thresholds:
+  high_vapor_pressure_kPa: 100.0
+  bubbler_kPa: 10.0
+  heated_source_kPa: 1.0
+
+reaction_probe_targets:
+  - species: HF
+    state:
+  - species: O
+    state: O(3P)
+  - species: O
+    state: O(1D)
+  - species: F
+    state: atom
+  - species: OH
+    state: radical
+  - species: Cl
+    state: atom
+  - species: e-
+    state: electron

@@ -1,0 +1,18 @@
+mode: enrichment
+
+generation:
+  max_total_candidates: 50
+  enabled_generators:
+    - SeedListGenerator
+  include_formula_only: false
+
+providers:
+  pubchem_enabled: false
+  pugview_enabled: false
+  cache_db: ./demo_cache.sqlite
+  max_api_candidates_per_run: 0
+  curated_properties_csv:
+  gwp_csv: examples/gwp_sample.csv
+  pfas_list_csv: examples/pfas_list_sample.csv
+  reactivity_csv: examples/local_reactivity_sample.csv
+  kinetics_csv: examples/kinetics_coverage_sample.csv

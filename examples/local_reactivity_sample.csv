@@ -1,0 +1,5 @@
+name,cas,reactive_groups,reactivity_flags,ghs_physical_h_codes
+triethylamine,121-44-8,Amines / basic nitrogen compounds,"acid_base_reactive, combustible_or_flammable_review",H225
+silane,7803-62-5,Silanes / reducing gases,"reducing, pyrophoric_or_highly_flammable_review",H220; H250
+hydrogen fluoride,7664-39-3,Hydrogen halides / acids,"acid_base_reactive, corrosive_review",H290
+fluorine,7782-41-4,Halogenating agents,"strong_oxidizer, halogenating",H270

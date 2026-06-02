@@ -1,0 +1,14 @@
+﻿metric,value
+generated_candidates,1097
+normalized_candidates,1097
+deduplicated_candidates,1083
+prefilter_passed,687
+prefilter_rejected,396
+pubchem_requests,0
+pugview_requests,0
+cache_hits,0
+negative_cache_hits,0
+planned_api_requests,0
+planned_api_candidates,0
+remote_enrichment_candidates,0
+final_summary_rows,687
